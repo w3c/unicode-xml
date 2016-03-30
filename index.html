@@ -24,6 +24,12 @@
 
           // editors, add as many as you like
           // only "name" is required
+          authors:  [
+              { name: "Martin Dürst", mailto: "duerst@it.aoyama.ac.jp",
+                company: "Invited Expert" },
+              { name: "Asmus Freytag", mailto: "asmus@unicode.org",
+                company: "Unicode Consortium" },
+			     ],
           editors:  [
               { name: "Martin Dürst", mailto: "duerst@it.aoyama.ac.jp",
                 company: "Invited Expert" },
@@ -91,7 +97,7 @@ ins {
 
 
 <div id="sotd">
-  <p>This document contains guidelines on the use of the Unicode Standard in conjunction with markup languages such as XML.</p>
+  <p>This document contains guidelines on the use of the Unicode Standard in conjunction with markup languages such as XML. It was originally produced as a joint publication between the W3C and the Unicode Consortium. It is now being maintained solely by the W3C.  The document will be published as a Working Group Note.</p>
   <div class="note">
     <p data-lang="en" style="font-weight: bold; font-size: 120%">Sending comments on this
       document</p>
@@ -1579,38 +1585,6 @@ href="#Unicode">Unicode</a>]), can be handled in three main ways.</p>
 </section>
 
 
-<section id="Versioning">
-  <h2>Versioning</h2>
-  <p>This report will be updated by the Unicode Technical Committee in
-    cooperation with the W3C Internationalization Activity whenever the tables of
-    characters in this document need to be updated as a result of the addition of
-    characters to the Unicode Standard, as a result of a revised determination of
-    the suitability of a given character for use with markup, or when additional
-    background information or recommendations become available.</p>
-  <p>Each report carries a revision number, which may be used to refer to a
-    specific version of the report. Older versions of the report will remain
-    available. Each version of this report specifies the underlying version of
-    the Unicode Standard.</p>
-  <p>For more information on the Unicode Standard and its versions, see:</p>
-  <ul class="unicode">
-    <li><a href="http://www.unicode.org/standard/versions/">Versions of
-      the Unicode Standard</a> [<a
-  href="#UnicodeVersions">UnicodeVersions</a>]</li>
-    <li><a href="http://www.unicode.org/ucd/">About the Unicode Character
-      Database</a> [<a href="#UCD">UCD</a>]</li>
-    <li><a href="http://www.unicode.org/Public/UNIDATA/UCD.html">Unicode
-      Character Database</a> [<a href="#UnicodeData">UnicodeData</a>]</li>
-  </ul>
-</section>
-<section id="Conformance">
-  <h2>Conformance</h2>
-  <p>In the context of the Unicode Standard, the material in this technical
-    report is <em>informative. </em>However, other documents, particularly markup
-    language specifications, may specify conformance including normative
-    references to this document. Such references may have to be updated as a
-    result of future updates to this report as discussed in Section 8, <a
-href="#Versioning">Versioning</a>.</p>
-</section>
 <section id="References">
   <h2>References</h2>
   <dl>
@@ -1723,82 +1697,19 @@ href="#Versioning">Versioning</a>.</p>
   <p>Mark Davis and Hideki Hiura contributed to the early drafts. Yukka Korpela
     and Felix Sasaki provided input to the current document.</p>
 </section>
-<section id="ChangeHistory">
-  <h2>Change History (last changes first)</h2>
-  <p>Changes from <a class="unicode"
-href="http://www.unicode.org/reports/tr20/tr20-8.html">http://www.unicode.org/reports/tr20/tr20-8.html</a> : Fixed one typo: &quot;accent&quot; to "acute" in Table 3.1. Updated references to the Unicode Standard in the Introduction and References section. [RI]</p>
-  <p>Changes from <a class="unicode"
-href="http://www.unicode.org/reports/tr20/tr20-7.html">http://www.unicode.org/reports/tr20/tr20-7.html</a> : Added entries for new characters in Unicode 5.0. Updated references to use
-    new chapter/section numbers in Unicode 5.0. Updated the discussion of
-    superscript and subscript characters, accounting for the differences between
-    their use in phonetic or phonemic transcription and mathematics. Added
-    Section 3.10 and 4.5, 4.6 and 4.7. Added a Section 7 on handling white space.
-    Updated references to W3C publications (AF). More work on white space
-    section; moved everything about BOM to one place (MJD)</p>
-  <p>Changes from <a class="unicode"
-href="http://www.unicode.org/reports/tr20/tr20-6.html">http://www.unicode.org/reports/tr20/tr20-6.html</a> : Added entries for new characters in Unicode 4.0. Separated out, and
-    extended, the discussion of format characters suitable for markup. This
-    resulted in a new section 2.6, moving section 3.2 to 4, and renumbering, as
-    well as new sections 4.1, 4.2, 4.3, 4.4. Added a discussion on noncharacters
-    in a new section 6. Updated reference from Unicode 3.1 and 3.2 to Unicode
-    4.0. Improved the layout an description of what is now table 5.1. Changed the
-    recommended action in 5.6 to none. Updated the Unicode status section.
-    Changed http://www.unicode.org/unicode/reports/ to <a
-href="http://www.unicode.org/reports/">http://www.unicode.org/reports</a> throughout to reflect the preferred style of URL (older style URLs continue
-    to be valid). Updated references to W3C publications. (AF/MJD)</p>
-  <p>Changes from <a class="unicode"
-href="http://www.unicode.org/reports/tr20/tr20-5.html">http://www.unicode.org/reports/tr20/tr20-5.html</a> : Updated reference from Unicode 3.0 to 3.1 and 3.2 where appropriate. Added
-    sections 3.6 and  3.9. Minor wording fixes in sections 2.3, 3.1, 3.2, 3.6,
-    3.10, 4.3, 4.5 and 5. (AF/MJD)</p>
-  <p>Changes from <a class="unicode"
-href="http://www.unicode.org/reports/tr20/tr20-4.html">http://www.unicode.org/reports/tr20/tr20-4.html</a> : Added a note to the introduction to limit the scope. Reorganized section 3
-    and clarified the language. Renamed some sections and tables. Updated the
-    document to prepare for publication as Unicode Technical Report and W3C Note
-    (AF/MJD). Minor editorial changes to the text, added section 4.7, fixed some
-    dates, plus a few typos. (AF)</p>
-  <p>Changes from <a class="unicode"
-href="http://www.unicode.org/reports/tr20/tr20-3.html">http://www.unicode.org/reports/tr20/tr20-3.html</a> : Minor editorial changes to the introduction, fixed some references, links,
-    and dates, plus a few typos. (AF/MJD)</p>
-  <p>Changes from <a class="unicode"
-href="http://www.unicode.org/reports/tr20/tr20-2.html">http://www.unicode.org/reports/tr20/tr20-2.html</a> : Added sections 2.1-2.6 (MJD), sections 3.1-3.5, and 3.8, as well as
-    sections 4.4-4.6 and 8 (AF). Edited text for publication as DRAFT Unicode
-    Technical Report. (AF)</p>
-  <p>Changes from <a class="unicode"
-href="http://www.unicode.org/reports/tr20/tr20-1.html">http://www.unicode.org/reports/tr20/tr20-1.html</a> : Completed references, linked TOC. Various wording changes. Added W3C WD
-    stylesheet, logo, copyright, status of this document. Streamlined authors'
-    section. (MJD) Added material on compatibility characters. (AF)</p>
-  <p>Changes from the initial draft: Fixed the header. Fixed the numbering.
-    Fixed the title. Put references to final version of data files based on
-    naming conventions. Minor wording changes. Added proposed language on
-    annotation characters to match example on FFFC. Posted for internal review by
-    UTC and W3C. (AF)</p>
-</section>
-<section id="Copyright">
-  <h2>Copyright</h2>
-  <p>Copyright © 1999-2012 Unicode<sup>®</sup>, Inc. and <a
-href="http://www.w3.org/">W3C</a><sup>®</sup> (<a
-href="http://www.csail.mit.edu/index.php"><acronym
-title="Massachussetts Institute of Technology">MIT</acronym></a>, <a
-href="http://www.ercim.eu/"><acronym
-title="European Research   Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved.</p>
-  <p>This document is available under the <a
-href="http://www.w3.org/Consortium/Legal/copyright-documents-19990405">W3C
-    Document License</a> or the <a
-href="http://www.unicode.org/copyright.html">Unicode License</a>.
-    Documents available from the W3C have additional <a
-href="http://www.w3.org/Consortium/Legal/ipr-notice-20000612#Legal_Disclaimer">warranties,
-    liability</a>, and <a
-href="http://www.w3.org/Consortium/Legal/ipr-notice-20000612#W3C_Trademarks">trademark</a> policies associated with them. The <a
-href="http://www.unicode.org/copyright.html">Unicode License</a> specifies warranty/liability and trademark terms including:</p>
-  <blockquote>
-    <p class="unicode">The Unicode Consortium makes no expressed or implied
-      warranty of any kind, and assumes no liability for errors or omissions. No
-      liability is assumed for incidental and consequential damages in connection
-      with or arising out of the use of the information or programs contained or
-      accompanying this technical report.</p>
-    <p class="unicode">Unicode and the Unicode logo are trademarks of Unicode,
-      Inc., and are registered in some jurisdictions.</p>
-  </blockquote>
-</section>
+
+    <section>
+      <h2 id="changeLog" class="informative">Changes Since the Last Published Version</h2>
+      <p>The following changes have been made since the <a href="https://www.w3.org/TR/unicode-xml/">Working Group Note</a> of 2013-01-24: </p>
+      <ul>
+        <li>Ported the document to HTML5 and formatted for respec, and published on github.</li>
+        <li>Replaced a lot of presentational markup with semantic.</li>
+        <li>Changes to SOTD and top matter to reflect the standard i18n publication development process.</li>
+        <li>Removed the Versioning section and Copyright section at the end of the document, since these were throwbacks to the joint publication between Unicode and W3C.</li>
+        <li>Replaced this Changes section with something simpler and added link to Github commits list.</li>
+      </ul>
+      <p>See the <a href="https://github.com/w3c/unicode-xml/commits/gh-pages">github commit log</a> for more details and diffs.</p>
+    </section>
+
 </body>
 </html>
