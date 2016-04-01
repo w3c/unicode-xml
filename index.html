@@ -1306,10 +1306,14 @@ href="#Superscripts">5.6</a> provide additional information for some of these
       markup is therefore deemed inappropriate. However, it is inappropriate to use
       any of these classes of characters to create the appearance of styled text
       runs.</p>
-    <p>For example to write <i>hello,</i> one should use &lt;i&gt;hello&lt;/i&gt;
+    <p>For example to write <span style='font-style: italic;'>hello</span>
+	  (in italic style), one should use the
+	  equivalent of <code>&lt;span style='font-style: italic;'&gt;hello&lt;/span&gt;</code>,
       and not the sequence of Unicode characters U+210E, U+212F, U+2113, U+2113,
-      U+2134. Conversely, to indicate <i>Planck's constant</i> one should use
-      U+210E and not &lt;i&gt;h&lt;/i&gt;.</p>
+      U+2134 (PLANCK CONSTANT, SCRIPT SMALL E, SCRIPT SMALL L, SCRIPT SMALL L,
+	  SCRIPT SMALL O). Conversely, to indicate <i>Planck's constant</i> one should use
+      U+210E (PLANCK CONSTANT) and not something such as
+	  &lt;span style='font-style: italic;'&gt;hello&lt;/span&gt;.</p>
     <p>When style is applied across entire words, sentences or paragraphs, the
       use of markup is preferred. When style is applied to individual letters,
       especially to letters inside a word, giving them a particular interpretation,
