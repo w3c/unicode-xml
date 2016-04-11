@@ -1308,12 +1308,16 @@ href="#Superscripts">5.6</a> provide additional information for some of these
       runs.</p>
     <p>For example to write <span style='font-style: italic;'>hello</span>
 	  (in italic style), one should use the
-	  equivalent of <code>&lt;span style='font-style: italic;'&gt;hello&lt;/span&gt;</code>,
-      and not the sequence of Unicode characters U+210E, U+212F, U+2113, U+2113,
-      U+2134 (PLANCK CONSTANT, SCRIPT SMALL E, SCRIPT SMALL L, SCRIPT SMALL L,
-	  SCRIPT SMALL O). Conversely, to indicate <i>Planck's constant</i> one should use
-      U+210E (PLANCK CONSTANT) and not something such as
-	  &lt;span style='font-style: italic;'&gt;hello&lt;/span&gt;.</p>
+	  equivalent of <code translate='no'>&lt;span style='font-style: italic;'&gt;hello&lt;/span&gt;</code>,
+      and not the sequence of Unicode characters ℎℯℓℓℴ
+	  (<span class='uname'>U+210E PLANCK CONSTANT</span>,
+	  <span class='uname'>U+212F SCRIPT SMALL E</span>,
+	  <span class='uname'>U+2113 SCRIPT SMALL L</span>,
+	  <span class='uname'>U+2113 SCRIPT SMALL L</span>,
+	  <span class='uname'>U+2134 SCRIPT SMALL O</span>).
+	  Conversely, to indicate <i>Planck's constant</i> one should use
+      ℎ (<span class='uname'>U+210E PLANCK CONSTANT</span>) and not something such as
+	  <code translate='no'>&lt;span style='font-style: italic;'&gt;h&lt;/span&gt;</code>.</p>
     <p>When style is applied across entire words, sentences or paragraphs, the
       use of markup is preferred. When style is applied to individual letters,
       especially to letters inside a word, giving them a particular interpretation,
