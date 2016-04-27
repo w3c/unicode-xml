@@ -111,7 +111,7 @@ table td {
 }
 
 .rtlTermCell {
-  text-direction: rtl;
+  direction: rtl;
   text-align: right;
 }
 
