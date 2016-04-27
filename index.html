@@ -3,19 +3,18 @@
 <head>
 <title>Unicode in XML and other Markup Languages</title>
 <meta charset="utf-8"/>
-<script src="script.js" type="application/javascript"></script>
 <script src="https://www.w3.org/Tools/respec/respec-w3c-common" class="remove"></script>
 <script class="remove">
       var respecConfig = {
           // specification status (e.g. WD, LCWD, WG-NOTE, etc.). If in doubt use ED.
-          specStatus:           "ED",
-          //publishDate:  "2016-07-21",
-          //previousPublishDate:  "2013-01-24",
-          //previousMaturity:  "Note",
+          specStatus:          "ED",
+          publishDate:  		"2016-05-03",
+          previousPublishDate:  "2016-05-03",
+          previousMaturity:  	"WG-NOTE",
 
 
           noRecTrack:           true,
-          shortName:            "tlreq",
+          shortName:            "unicode-xml",
           copyrightStart: 		"1999",
           edDraftURI:   		"http://w3c.github.io/unicode-xml/",
 
@@ -99,13 +98,12 @@ ins {
 <div id="sotd">
   <p>This document contains guidelines on the use of the Unicode Standard in conjunction with markup languages such as XML. It was originally produced as a joint publication between the W3C and the Unicode Consortium. It is now being maintained solely by the W3C.  The document will be published as a Working Group Note.</p>
   <div class="note">
-    <p data-lang="en" style="font-weight: bold; font-size: 120%">Sending comments on this
+    <p style="font-weight: bold; font-size: 120%">Sending comments on this
       document</p>
-    <p data-lang="en">If you wish to make comments regarding this document, please raise them as <a href="https://github.com/w3c/unicode-xml/issues" style="font-size: 120%;">github issues</a> 
-      <!--against the <a href="http://www.w3.org/TR/2015/WD-ilreq-20150721/" style="font-size: 120%">latest dated version in /TR</a>-->.
+    <p>If you wish to make comments regarding this document, please raise them as <a href="https://github.com/w3c/unicode-xml/issues" style="font-size: 120%;">github issues</a>.
       Only send comments by email if you are unable to raise issues on github (see links below).
       All comments are welcome.</p>
-    <p data-lang="en">To make it easier to track comments, please raise separate issues or emails for each comment, and point to the section you are commenting on&nbsp; using a URL for the dated version of the document.</p>
+    <p>To make it easier to track comments, please raise separate issues or emails for each comment, and point to the section you are commenting on&nbsp; using a URL for the dated version of the document.</p>
   </div>
 </div>
 
@@ -135,8 +133,8 @@ ins {
     language. Formatting characters are discussed in Section 3, <a
 href="#Suitable">Characters not Suitable for Use With Markup</a> and
     Section 4, <a href="#Format">Format Characters Suitable for Use With
-    Markup</a>, compatibility characters in Section 5,<a
-href="#Compatibility">Characters with Compatibility Mappings</a> .
+    Markup</a>, compatibility characters in Section 5, <a
+href="#Compatibility">Characters with Compatibility Mappings</a>.
     Section 6 briefly discusses noncharacters, and Section 7 is devoted to white
     space.</p>
   <p>The interaction of character
@@ -324,94 +322,93 @@ href="#Format">Section 4</a> provides a list of format characters that are
   <section id="Charlist">
     <h3>Table of Characters not Suitable for use With Markup</h3>
     <p>The following table contains the characters currently considered not
-      suitable for use with markup in XML or HTML. (See however the <a
-href="#Note">note</a> in the <a href="#Introduction">Introduction</a>.) They
+      suitable for use with markup in XML or HTML. (See however the note in the <a href="#Introduction">Introduction</a>.) They
       may also be unsuitable for other markup or page layout languages. For
       determining possible conflict this report uses the markup available in
       HTML.</p>
       <figure>
      <figcaption>Characters not suitable for use with markup</figcaption>
-   <table border="1" cellpadding="2" cellspacing="0" width="95%">
+   <table>
       <tbody>
         <tr>
-          <th bgcolor="#ccffcc" width="210"><p
+          <th><p
        >Codepoints</p>
           </th>
-          <th bgcolor="#ccffcc" width="273"><p
+          <th><p
        >Names/Description</p>
           </th>
-          <th bgcolor="#ccffcc" width="341"><p>Short
+          <th><p>Short
               Comment</p>
           </th>
         </tr>
         <tr>
-          <td width="210">U+0340..U+0341</td>
-          <td width="273">Clones of grave and acute</td>
-          <td width="341">Deprecated in Unicode</td>
+          <td>U+0340..U+0341</td>
+          <td>Clones of grave and acute</td>
+          <td>Deprecated in Unicode</td>
         </tr>
         <tr>
-          <td width="210">U+17A3, U+17D3</td>
-          <td width="273">Obsolete characters for Khmer</td>
-          <td width="341">Deprecated in Unicode</td>
+          <td>U+17A3, U+17D3</td>
+          <td>Obsolete characters for Khmer</td>
+          <td>Deprecated in Unicode</td>
         </tr>
         <tr>
-          <td width="210">U+2028..U+2029</td>
-          <td width="273">Line and paragraph separator</td>
-          <td width="341">use &lt;xhtml:br /&gt;,
+          <td>U+2028..U+2029</td>
+          <td>Line and paragraph separator</td>
+          <td>use &lt;xhtml:br /&gt;,
             &lt;xhtml:p&gt;&lt;/xhtml:p&gt;, or equivalent</td>
         </tr>
         <tr>
-          <td width="210">U+202A..U+202E</td>
-          <td width="273">BIDI embedding controls <br />
+          <td>U+202A..U+202E</td>
+          <td>BIDI embedding controls <br />
             (LRE, RLE, LRO, RLO, PDF)</td>
-          <td width="341">Strongly discouraged in [<a
+          <td>Strongly discouraged in [<a
         href="#html4.01">HTML4.01</a>]</td>
         </tr>
         <tr>
-          <td width="210">U+206A..U+206B</td>
-          <td width="273">Activate/Inhibit Symmetric swapping</td>
-          <td width="341">Deprecated  in Unicode</td>
+          <td>U+206A..U+206B</td>
+          <td>Activate/Inhibit Symmetric swapping</td>
+          <td>Deprecated  in Unicode</td>
         </tr>
         <tr>
-          <td width="210">U+206C..U+206D</td>
-          <td width="273">Activate/Inhibit Arabic form shaping</td>
-          <td width="341">Deprecated in Unicode</td>
+          <td>U+206C..U+206D</td>
+          <td>Activate/Inhibit Arabic form shaping</td>
+          <td>Deprecated in Unicode</td>
         </tr>
         <tr>
-          <td width="210">U+206E..U+206F</td>
-          <td width="273">Activate/Inhibit National digit shapes</td>
-          <td width="341">Deprecated in Unicode</td>
+          <td>U+206E..U+206F</td>
+          <td>Activate/Inhibit National digit shapes</td>
+          <td>Deprecated in Unicode</td>
         </tr>
         <tr>
-          <td width="210">U+FFF9..U+FFFB</td>
-          <td width="273">Interlinear annotation characters</td>
-          <td width="341">Use ruby markup [<a href="#Ruby">Ruby</a>]</td>
+          <td>U+FFF9..U+FFFB</td>
+          <td>Interlinear annotation characters</td>
+          <td>Use ruby markup [<a href="#Ruby">Ruby</a>]</td>
         </tr>
         <tr>
-          <td rowspan="2" width="210">U+FEFF</td>
-          <td width="273">as ZWNBSP</td>
-          <td width="341">Use U+2060 Word Joiner instead</td>
+          <td rowspan="2">U+FEFF</td>
+          <td>as ZWNBSP</td>
+          <td>Use U+2060 Word Joiner instead</td>
         </tr>
         <tr>
-          <td width="273">as Byte Order Mark</td>
-          <td width="341">Use only at the start of a file, not as part of
+          <td>as Byte Order Mark</td>
+          <td>Use only at the start of a file, not as part of
             markup</td>
         </tr>
         <tr>
-          <td width="210">U+FFFC</td>
-          <td width="273">Object replacement character</td>
-          <td width="341">Use markup, e.g. HTML &lt;object&gt; or HTML
+          <td>U+FFFC</td>
+          <td>Object replacement character</td>
+          <td>Use markup, e.g. HTML &lt;object&gt; or HTML
             &lt;img&gt;</td>
         </tr>
         <tr>
-          <td width="210">U+1D173..U+1D17A</td>
-          <td width="273">Scoping for Musical Notation</td>
-          <td width="341">Use an appropriate markup language</td>
+          <td>U+1D173..U+1D17A</td>
+          <td>Scoping for Musical Notation</td>
+          <td>Use an appropriate markup language</td>
         </tr>
         <tr>
-          <td width="210">U+E0000..U+E007F</td>
-          <td width="273">Language Tag code points </td>
-          <td width="341">Use xhtml:lang or xml:lang</td>
+          <td>U+E0000..U+E007F</td>
+          <td>Language Tag code points </td>
+          <td>Use xhtml:lang or xml:lang</td>
         </tr>
       </tbody>
     </table>
@@ -472,38 +469,38 @@ href="#UTR9">[UAX 9]</a>.</p>
     <p><em>Replacement markup</em>: The following table gives the replacement
       markup:<br />
     </p>
-      <table border="1" cellspacing="0">
+      <table>
         <tbody>
           <tr>
-            <td bgcolor="#ccffcc" width="15"><b>Unicode</b></td>
-            <td bgcolor="#ccffcc" width="30%"><b>Equivalent markup</b></td>
-            <td bgcolor="#ccffcc" width="55%"><b>Comment</b></td>
+            <td><b>Unicode</b></td>
+            <td><b>Equivalent markup</b></td>
+            <td><b>Comment</b></td>
           </tr>
           <tr>
-            <td width="15"><p>RLO</p></td>
-            <td width="30%">&lt;xhtml:bdo dir = "rtl"&gt;</td>
-            <td width="55%"> </td>
+            <td><p>RLO</p></td>
+            <td>&lt;xhtml:bdo dir = "rtl"&gt;</td>
+            <td> </td>
           </tr>
           <tr>
-            <td width="15"><p>LRO</p></td>
-            <td width="30%">&lt;xhtml:bdo dir = "ltr"&gt;</td>
-            <td width="55%"> </td>
+            <td><p>LRO</p></td>
+            <td>&lt;xhtml:bdo dir = "ltr"&gt;</td>
+            <td> </td>
           </tr>
           <tr>
-            <td width="15">PDF</td>
-            <td width="30%">&lt;/xhtml:bdo&gt;</td>
-            <td width="55%">when used to terminate RLO or LRO only, otherwise
+            <td>PDF</td>
+            <td>&lt;/xhtml:bdo&gt;</td>
+            <td>when used to terminate RLO or LRO only, otherwise
               ignore</td>
           </tr>
           <tr>
-            <td width="15">RLE</td>
-            <td width="30%">dir = "rtl"</td>
-            <td width="55%">attribute on block or inline element</td>
+            <td>RLE</td>
+            <td>dir = "rtl"</td>
+            <td>attribute on block or inline element</td>
           </tr>
           <tr>
-            <td width="15">LRE</td>
-            <td width="30%">dir = "ltr"</td>
-            <td width="55%">attribute on block or inline element</td>
+            <td>LRE</td>
+            <td>dir = "ltr"</td>
+            <td>attribute on block or inline element</td>
           </tr>
         </tbody>
       </table>
@@ -519,12 +516,12 @@ href="#HTML4.0-8.2">HMTL 4.0-8.2</a>]. The text of HTML 4.0 gives this
         inline elements (including <a
   href="http://www.w3.org/TR/html401/struct/dirlang.html#edef-BDO"
   class="noxref"><samp class="einst">BDO</samp></a>) concurrently with the
-        corresponding <a rel="biblioentry" href="#Unicode"
+        corresponding <a href="#Unicode"
   class="normref">[UNICODE]</a> formatting characters. Preferably one or the
         other should be used exclusively. The markup method offers a better
         guarantee of document structural integrity and alleviates some problems
         when editing bidirectional HTML text with a simple text editor, but some
-        software may be more apt at using the <a rel="biblioentry" href="#Unicode"
+        software may be more apt at using the <a href="#Unicode"
   class="normref">[UNICODE]</a> characters. If both methods are used, great
         care should be exercised to insure proper nesting of markup and directional
         embedding or override, otherwise, rendering results are undefined.</p>
@@ -787,144 +784,144 @@ href="#Charlist">3.1</a>, they are considered suitable for use with markup.
 href="#Unicode">Unicode</a>].</p>
     <figure>
    <figcaption>Some characters that affect text format but are suitable for use with markup</figcaption>
- <table border="1" cellpadding="2" cellspacing="0" width="95%">
+ <table>
     <tbody>
       <tr>
-        <th bgcolor="#ccffcc" width="198"><p>Code
+        <th><p>Code
             points</p>
         </th>
-        <th bgcolor="#ccffcc" width="362"><p
+        <th><p
        >Names/Description</p>
         </th>
-        <th bgcolor="#ccffcc" width="280"><p>Short
+        <th><p>Short
             Comment</p>
         </th>
       </tr>
       <tr>
-        <td width="198">U+00A0</td>
-        <td width="362">No-break Space</td>
-        <td width="280">Line break control</td>
+        <td>U+00A0</td>
+        <td>No-break Space</td>
+        <td>Line break control</td>
       </tr>
       <tr>
-        <td width="198">U+00AD</td>
-        <td width="362">Soft Hyphen</td>
-        <td width="280">Line break control</td>
+        <td>U+00AD</td>
+        <td>Soft Hyphen</td>
+        <td>Line break control</td>
       </tr>
       <tr>
-        <td width="198">U+034F</td>
-        <td width="362">Combining Grapheme Joiner</td>
-        <td width="280">Used in sorting</td>
+        <td>U+034F</td>
+        <td>Combining Grapheme Joiner</td>
+        <td>Used in sorting</td>
       </tr>
       <tr>
-        <td width="198">U+0600</td>
-        <td width="362">Arabic Number Sign</td>
-        <td width="280">Subtending mark</td>
+        <td>U+0600</td>
+        <td>Arabic Number Sign</td>
+        <td>Subtending mark</td>
       </tr>
       <tr>
-        <td width="198">U+0601</td>
-        <td width="362">Arabic Sign Sanah</td>
-        <td width="280">Subtending mark</td>
+        <td>U+0601</td>
+        <td>Arabic Sign Sanah</td>
+        <td>Subtending mark</td>
       </tr>
       <tr>
-        <td width="198">U+0602</td>
-        <td width="362">Arabic Footnote Marker</td>
-        <td width="280">Subtending mark</td>
+        <td>U+0602</td>
+        <td>Arabic Footnote Marker</td>
+        <td>Subtending mark</td>
       </tr>
       <tr>
-        <td width="198">U+0603</td>
-        <td width="362">Arabic Sign Safha</td>
-        <td width="280">Subtending mark</td>
+        <td>U+0603</td>
+        <td>Arabic Sign Safha</td>
+        <td>Subtending mark</td>
       </tr>
       <tr>
-        <td width="198">U+06DD</td>
-        <td width="362">Arabic End of Ayah</td>
-        <td width="280">Enclosing mark</td>
+        <td>U+06DD</td>
+        <td>Arabic End of Ayah</td>
+        <td>Enclosing mark</td>
       </tr>
       <tr>
-        <td width="198">U+070F</td>
-        <td width="362">Syriac Abbreviation Mark (SAM)</td>
-        <td width="280">Supertending mark</td>
+        <td>U+070F</td>
+        <td>Syriac Abbreviation Mark (SAM)</td>
+        <td>Supertending mark</td>
       </tr>
       <tr>
-        <td width="198">U+0F0C</td>
-        <td width="362">Tibetan Mark Delimiter Tsheg Bstar</td>
-        <td width="280">Non-breaking form of 0F0B</td>
+        <td>U+0F0C</td>
+        <td>Tibetan Mark Delimiter Tsheg Bstar</td>
+        <td>Non-breaking form of 0F0B</td>
       </tr>
       <tr>
-        <td width="198">U+115F..U+1160</td>
-        <td width="362">Hangul Jamo Fillers</td>
-        <td width="280">Filler</td>
+        <td>U+115F..U+1160</td>
+        <td>Hangul Jamo Fillers</td>
+        <td>Filler</td>
       </tr>
       <tr>
-        <td width="198">U+180B..U+180E</td>
-        <td width="362">Mongolian Variation Selectors(FVS1..FVS3), Mongolian
+        <td>U+180B..U+180E</td>
+        <td>Mongolian Variation Selectors(FVS1..FVS3), Mongolian
           Vowel Separator</td>
-        <td width="280">Required for Mongolian</td>
+        <td>Required for Mongolian</td>
       </tr>
       <tr>
-        <td width="198">U+200B</td>
-        <td width="362">Zero-width Space</td>
-        <td width="280">Line break control</td>
+        <td>U+200B</td>
+        <td>Zero-width Space</td>
+        <td>Line break control</td>
       </tr>
       <tr>
-        <td width="198">U+200C..U+200D</td>
-        <td width="362">Zero-width Join Controls (ZWJ and ZWNJ)</td>
-        <td width="280">Required for a.o. Persian and many Indic scripts</td>
+        <td>U+200C..U+200D</td>
+        <td>Zero-width Join Controls (ZWJ and ZWNJ)</td>
+        <td>Required for a.o. Persian and many Indic scripts</td>
       </tr>
       <tr>
-        <td width="198">U+200E..U+200F</td>
-        <td width="362">Implicit Directional Marks (LRM and RLM)</td>
-        <td width="280">LRM and RLM are allowed</td>
+        <td>U+200E..U+200F</td>
+        <td>Implicit Directional Marks (LRM and RLM)</td>
+        <td>LRM and RLM are allowed</td>
       </tr>
       <tr>
-        <td width="198">U+2011</td>
-        <td width="362">Non-breaking Hyphen</td>
-        <td width="280">Line break control</td>
+        <td>U+2011</td>
+        <td>Non-breaking Hyphen</td>
+        <td>Line break control</td>
       </tr>
       <tr>
-        <td width="198">U+202F</td>
-        <td width="362">Narrow No-break Space</td>
-        <td width="280">Line break control/Mongolian</td>
+        <td>U+202F</td>
+        <td>Narrow No-break Space</td>
+        <td>Line break control/Mongolian</td>
       </tr>
       <tr>
-        <td width="198">U+2044</td>
-        <td width="362">Fraction Slash</td>
-        <td width="280">Or use markup (MathML)</td>
+        <td>U+2044</td>
+        <td>Fraction Slash</td>
+        <td>Or use markup (MathML)</td>
       </tr>
       <tr>
-        <td width="198">U+2060</td>
-        <td width="362">Word Joiner</td>
-        <td width="280">Use for that purpose instead of U+FEFF ZWNBSP</td>
+        <td>U+2060</td>
+        <td>Word Joiner</td>
+        <td>Use for that purpose instead of U+FEFF ZWNBSP</td>
       </tr>
       <tr>
-        <td width="198">U+2061..U+2064</td>
-        <td width="362">Invisible Mathematical Operators</td>
-        <td width="280">Mathematical use</td>
+        <td>U+2061..U+2064</td>
+        <td>Invisible Mathematical Operators</td>
+        <td>Mathematical use</td>
       </tr>
       <tr>
-        <td width="198">U+2FF0..U+2FFB</td>
-        <td width="362">Ideographic Character Description</td>
-        <td width="280">Graphic characters (not controls)</td>
+        <td>U+2FF0..U+2FFB</td>
+        <td>Ideographic Character Description</td>
+        <td>Graphic characters (not controls)</td>
       </tr>
       <tr>
-        <td width="198">U+303E</td>
-        <td width="362">Ideographic Variation Indicator</td>
-        <td width="280">Graphic character (not a control)</td>
+        <td>U+303E</td>
+        <td>Ideographic Variation Indicator</td>
+        <td>Graphic character (not a control)</td>
       </tr>
       <tr>
-        <td width="198">U+FF80</td>
-        <td width="362">Halfwidth Hangul Filler</td>
-        <td width="280">Filler, not generally required</td>
+        <td>U+FF80</td>
+        <td>Halfwidth Hangul Filler</td>
+        <td>Filler, not generally required</td>
       </tr>
       <tr>
-        <td width="198">FE00..FE0F</td>
-        <td width="362">Variation Selectors</td>
-        <td width="280">Modify graphic characters</td>
+        <td>FE00..FE0F</td>
+        <td>Variation Selectors</td>
+        <td>Modify graphic characters</td>
       </tr>
       <tr>
-        <td width="198">E0100..E01DF</td>
-        <td width="362">Variation Selectors</td>
-        <td width="280">Modify graphic characters</td>
+        <td>E0100..E01DF</td>
+        <td>Variation Selectors</td>
+        <td>Modify graphic characters</td>
       </tr>
     </tbody>
   </table>
@@ -1051,7 +1048,7 @@ style="font-style: normal;">and</em> suitable markup. It is important to
       down by code points. Action summarizes the recommended action to be
       taken whenever markup is first applied to non-XML text. Each entry indicates
       whether the characters can be substituted using the compatibility equivalent
-      according to Normalization Form KC of [<a href="#UAX15">UAX 15</a>], can be
+      according to Normalization Form KC of [<a href="#UTR15">UAX 15</a>], can be
       replaced by equivalent markup where available, or should be retained. For
       some cases, instead of or in addition to markup, style information [<a
 href="#CSS">CSS</a>] is needed. Description and usage provides
@@ -1060,226 +1057,226 @@ href="#Superscripts">5.6</a> provide additional information for some of these
       sets of compatibility characters including detailed recommended actions.</p>
     <figure>
      <figcaption>Characters with compatibility mappings</figcaption>
-   <table border="1" cellpadding="2" cellspacing="0" width="95%">
+   <table>
       <tbody>
         <tr>
-          <th bgcolor="#ccffcc" width="80">Tag value</th>
-          <th bgcolor="#ccffcc" width="97">Code range</th>
-          <th bgcolor="#ccffcc" width="83">Action</th>
-          <th bgcolor="#ccffcc">Description and usage</th>
+          <th>Tag value</th>
+          <th>Code range</th>
+          <th>Action</th>
+          <th>Description and usage</th>
         </tr>
         <tr>
-          <td valign="top" width="80">&lt;circled&gt;</td>
-          <td valign="top" width="97">all</td>
-          <td valign="top" width="83">retain</td>
-          <td valign="top" width="572">Circled letters and digits used for list
+          <td>&lt;circled&gt;</td>
+          <td>all</td>
+          <td>retain</td>
+          <td>Circled letters and digits used for list
             item markers, and in running text</td>
         </tr>
         <tr>
-          <td rowspan="12" valign="top" width="80">&lt;compat&gt;</td>
-          <td valign="top" width="97">2002..200A</td>
-          <td valign="top" width="83">retain</td>
-          <td valign="top" width="572">Fixed width spaces</td>
+          <td rowspan="12">&lt;compat&gt;</td>
+          <td>2002..200A</td>
+          <td>retain</td>
+          <td>Fixed width spaces</td>
         </tr>
         <tr>
-          <td valign="top" width="97">2100..2101</td>
-          <td valign="top" width="83">retain</td>
-          <td valign="top" width="572">Variant letter forms that are used as
+          <td>2100..2101</td>
+          <td>retain</td>
+          <td>Variant letter forms that are used as
             symbols</td>
         </tr>
         <tr>
-          <td valign="top" width="97">2105..2106</td>
-          <td valign="top" width="83">retain</td>
-          <td valign="top" width="572">Variant letter forms that are used as
+          <td>2105..2106</td>
+          <td>retain</td>
+          <td>Variant letter forms that are used as
             symbols</td>
         </tr>
         <tr>
-          <td valign="top" width="97">2121, 213B</td>
-          <td valign="top" width="83">retain</td>
-          <td valign="top" width="572">For use as single code point in vertical
+          <td>2121, 213B</td>
+          <td>retain</td>
+          <td>For use as single code point in vertical
             layout</td>
         </tr>
         <tr>
-          <td valign="top" width="97">2160..217F</td>
-          <td valign="top" width="83">retain, or use list item marker style, or
+          <td>2160..217F</td>
+          <td>retain, or use list item marker style, or
             normalize</td>
-          <td valign="top" width="572">For use as single code point in vertical
+          <td>For use as single code point in vertical
             layout, or as list item marker</td>
         </tr>
         <tr>
-          <td valign="top" width="97">2474..249B</td>
-          <td valign="top" width="83">retain, or use list item marker style, or
+          <td>2474..249B</td>
+          <td>retain, or use list item marker style, or
             normalize</td>
-          <td valign="top" width="572">Parenthesized or dotted number used as
+          <td>Parenthesized or dotted number used as
             list item marker</td>
         </tr>
         <tr>
-          <td valign="top" width="97">249C..24B5</td>
-          <td valign="top" width="83">retain, or use list item marker style, or
+          <td>249C..24B5</td>
+          <td>retain, or use list item marker style, or
             normalize</td>
-          <td valign="top" width="572">Parenthesized letters used as list item
+          <td>Parenthesized letters used as list item
             markers</td>
         </tr>
         <tr>
-          <td valign="top" width="97">3131..318E</td>
-          <td valign="top" width="83">retain</td>
-          <td valign="top" width="572">Compatibility Hangul Jamo. These do not
+          <td>3131..318E</td>
+          <td>retain</td>
+          <td>Compatibility Hangul Jamo. These do not
             conjoin</td>
         </tr>
         <tr>
-          <td valign="top" width="97">3200..3229</td>
-          <td valign="top" width="83">retain, or use list item marker style, or
+          <td>3200..3229</td>
+          <td>retain, or use list item marker style, or
             normalize</td>
-          <td valign="top" width="572">Parenthesized characters used as list item
+          <td>Parenthesized characters used as list item
             markers</td>
         </tr>
         <tr>
-          <td height="26" valign="top" width="97">322A..3243</td>
-          <td height="26" valign="top" width="83">retain</td>
-          <td height="26" valign="top" width="572">Parenthesized characters used
+          <td>322A..3243</td>
+          <td>retain</td>
+          <td>Parenthesized characters used
             as symbols in vertical layout</td>
         </tr>
         <tr>
-          <td valign="top" width="97">32C0..32CB</td>
-          <td valign="top" width="83">retain</td>
-          <td valign="top" width="572">String used as single code point in
+          <td>32C0..32CB</td>
+          <td>retain</td>
+          <td>String used as single code point in
             vertical layout</td>
         </tr>
         <tr>
-          <td valign="top">all other</td>
-          <td valign="top" width="83">retain</td>
-          <td valign="top" width="572">Maintain, semantic distinctions apply</td>
+          <td>all other</td>
+          <td>retain</td>
+          <td>Maintain, semantic distinctions apply</td>
         </tr>
         <tr>
-          <td valign="top" width="80">&lt;final&gt;</td>
-          <td valign="top" width="97">all</td>
-          <td valign="top" width="83">normalize</td>
-          <td valign="top" width="572">Arabic Presentation forms</td>
+          <td>&lt;final&gt;</td>
+          <td>all</td>
+          <td>normalize</td>
+          <td>Arabic Presentation forms</td>
         </tr>
         <tr>
-          <td valign="top" width="80">&lt;font&gt;</td>
-          <td valign="top" width="97">all</td>
-          <td valign="top" width="83">retain</td>
-          <td valign="top" width="572">Variant letter forms that are used as
+          <td>&lt;font&gt;</td>
+          <td>all</td>
+          <td>retain</td>
+          <td>Variant letter forms that are used as
             symbols</td>
         </tr>
         <tr>
-          <td valign="top" width="80">&lt;fraction&gt;</td>
-          <td valign="top" width="97">all</td>
-          <td valign="top" width="83">normalize</td>
-          <td valign="top" width="572">As long as fraction slash is
+          <td>&lt;fraction&gt;</td>
+          <td>all</td>
+          <td>normalize</td>
+          <td>As long as fraction slash is
             supported!</td>
         </tr>
         <tr>
-          <td valign="top" width="80">&lt;initial&gt;</td>
-          <td valign="top" width="97">all</td>
-          <td valign="top" width="83">normalize</td>
-          <td valign="top" width="572">Arabic Presentation forms</td>
+          <td>&lt;initial&gt;</td>
+          <td>all</td>
+          <td>normalize</td>
+          <td>Arabic Presentation forms</td>
         </tr>
         <tr>
-          <td valign="top" width="80">&lt;isolated&gt;</td>
-          <td valign="top" width="97">all</td>
-          <td valign="top" width="83">normalize</td>
-          <td valign="top" width="572">Arabic Presentation forms</td>
+          <td>&lt;isolated&gt;</td>
+          <td>all</td>
+          <td>normalize</td>
+          <td>Arabic Presentation forms</td>
         </tr>
         <tr>
-          <td valign="top" width="80">&lt;medial&gt;</td>
-          <td valign="top" width="97">all</td>
-          <td valign="top" width="83">normalize</td>
-          <td valign="top" width="572">Arabic Presentation forms</td>
+          <td>&lt;medial&gt;</td>
+          <td>all</td>
+          <td>normalize</td>
+          <td>Arabic Presentation forms</td>
         </tr>
         <tr>
-          <td valign="top" width="80">&lt;narrow&gt;</td>
-          <td valign="top" width="97">all</td>
-          <td valign="top" width="83">retain</td>
-          <td valign="top" width="572">Half-width characters</td>
+          <td>&lt;narrow&gt;</td>
+          <td>all</td>
+          <td>retain</td>
+          <td>Half-width characters</td>
         </tr>
         <tr>
-          <td valign="top" width="80">&lt;noBreak&gt;</td>
-          <td valign="top" width="97">all</td>
-          <td valign="top" width="83">retain</td>
-          <td valign="top" width="572">The compatibility mapping merely indicates
+          <td>&lt;noBreak&gt;</td>
+          <td>all</td>
+          <td>retain</td>
+          <td>The compatibility mapping merely indicates
             the equivalent breaking character. The noBreak distinction must be
             preserved</td>
         </tr>
         <tr>
-          <td valign="top" width="80">&lt;small&gt;</td>
-          <td valign="top" width="97">all</td>
-          <td valign="top" width="83">retain</td>
-          <td valign="top" width="572">Precise usage unknown. Maintain, but do
+          <td>&lt;small&gt;</td>
+          <td>all</td>
+          <td>retain</td>
+          <td>Precise usage unknown. Maintain, but do
             not generate</td>
         </tr>
         <tr>
-          <td rowspan="4" valign="top" width="80">&lt;square&gt;</td>
-          <td valign="top" width="97">3300..3357</td>
-          <td valign="top" width="83">retain</td>
-          <td valign="top" width="572">Single display cell cluster containing
+          <td rowspan="4">&lt;square&gt;</td>
+          <td>3300..3357</td>
+          <td>retain</td>
+          <td>Single display cell cluster containing
             multiple lines of kana for vertical layout</td>
         </tr>
         <tr>
-          <td valign="top" width="97">3358..337D</td>
-          <td valign="top" width="83">retain</td>
-          <td valign="top" width="572">For use as single code point in vertical
+          <td>3358..337D</td>
+          <td>retain</td>
+          <td>For use as single code point in vertical
             layout</td>
         </tr>
         <tr>
-          <td valign="top" width="97">33E0..33FE</td>
-          <td valign="top" width="83">retain</td>
-          <td valign="top" width="572">For use as single code point in vertical
+          <td>33E0..33FE</td>
+          <td>retain</td>
+          <td>For use as single code point in vertical
             layout</td>
         </tr>
         <tr>
-          <td valign="top" width="97">all other</td>
-          <td valign="top" width="83">retain</td>
-          <td valign="top" width="572">Variant letter form used as symbol in
+          <td>all other</td>
+          <td>retain</td>
+          <td>Variant letter form used as symbol in
             vertical layout</td>
         </tr>
         <tr>
-          <td rowspan="2" valign="top" width="80">&lt;sub&gt;</td>
-          <td valign="top" width="97">2080..208E</td>
-          <td valign="top" width="83">retain, or use markup</td>
-          <td valign="top" width="572">Subscript digits 0-9, as well as minus,
+          <td rowspan="2">&lt;sub&gt;</td>
+          <td>2080..208E</td>
+          <td>retain, or use markup</td>
+          <td>Subscript digits 0-9, as well as minus,
             plus, equal and parens</td>
         </tr>
         <tr>
-          <td valign="top" width="97">all other</td>
-          <td valign="top" width="83">retain</td>
-          <td valign="top" width="572">Subscript characters, usually used as
+          <td>all other</td>
+          <td>retain</td>
+          <td>Subscript characters, usually used as
             modifier letters in phonetic notation</td>
         </tr>
         <tr>
-          <td rowspan="5" valign="top" width="80">&lt;super&gt;</td>
-          <td valign="top" width="97">00B2..00B3</td>
-          <td rowspan="4" valign="top" width="83">retain, or use  markup</td>
-          <td rowspan="4" valign="top" width="572">Superscript digits 0-9, as
+          <td rowspan="5">&lt;super&gt;</td>
+          <td>00B2..00B3</td>
+          <td rowspan="4">retain, or use  markup</td>
+          <td rowspan="4">Superscript digits 0-9, as
             well as minus, plus, equal and parens</td>
         </tr>
         <tr>
-          <td valign="top" width="97">00B9</td>
+          <td>00B9</td>
         </tr>
         <tr>
-          <td valign="top" width="97">2070</td>
+          <td>2070</td>
         </tr>
         <tr>
-          <td valign="top" width="97">2074..207E</td>
+          <td>2074..207E</td>
         </tr>
         <tr>
-          <td valign="top" width="97">all other</td>
-          <td valign="top" width="83">retain</td>
-          <td valign="top" width="572">Superscript characters, usually used as
+          <td>all other</td>
+          <td>retain</td>
+          <td>Superscript characters, usually used as
             modifier letters in phonetic notation</td>
         </tr>
         <tr>
-          <td valign="top" width="80">&lt;vertical&gt;</td>
-          <td valign="top" width="97">all</td>
-          <td valign="top" width="83">normalize</td>
-          <td valign="top" width="572">East Asian Presentation forms</td>
+          <td>&lt;vertical&gt;</td>
+          <td>all</td>
+          <td>normalize</td>
+          <td>East Asian Presentation forms</td>
         </tr>
         <tr>
-          <td valign="top" width="80">&lt;wide&gt;</td>
-          <td valign="top" width="97">all</td>
-          <td valign="top" width="83">retain</td>
-          <td valign="top" width="572">Full-width characters</td>
+          <td>&lt;wide&gt;</td>
+          <td>all</td>
+          <td>retain</td>
+          <td>Full-width characters</td>
         </tr>
       </tbody>
     </table>
