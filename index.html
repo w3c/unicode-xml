@@ -8,7 +8,7 @@
       var respecConfig = {
           // specification status (e.g. WD, LCWD, WG-NOTE, etc.). If in doubt use ED.
           specStatus:          "ED",
-          publishDate:  		"2017-05-06",
+          publishDate:  		"2017-07-08",
           previousPublishDate:  "2016-05-03",
           previousMaturity:  	"WG-NOTE",
 
@@ -85,6 +85,15 @@ em.unicode {
 ins {
 	background-color: #FF6;
 }
+
+.deprecation-box {
+	background-color: #FF9999;
+	border: 8px solid red;
+	padding: 1em;
+	width: 95%;
+	position: center;
+}
+
 </style>
 </head>
 
@@ -96,13 +105,20 @@ ins {
 
 
 <div id="sotd">
-  <p>This document contains guidelines on the use of the Unicode Standard in 
-  conjunction with markup languages such as XML. It was originally produced 
-  as a joint publication between the W3C and the <a href="http://www.unicode.org">Unicode 
-  Consortium</a>. In 2016, Unicode withdrew publication as a Unicode Technical 
-  Report. The W3C is maintaining this version as a historical reference.
-  Some of the materials in this document might be stale or out of date. 
-  </p>
+	
+	<p>This document contains guidelines on the use of the Unicode Standard in 
+  conjunction with markup languages such as XML.</p>
+	<div class="deprecation-box">
+		<h3>Historical Status</h3>
+  <p>Many of the materials in this document are stale and out of date; 
+  the W3C is maintaining this version solely as a historical reference. 
+  This document was originally produced as a joint publication between 
+  the W3C and the <a href="http://www.unicode.org">Unicode 
+  Consortium</a>. In 2016, Unicode withdrew publication as a Unicode 
+  Technical Report. </p> 
+  
+  </div> 
+  
   <div class="note">
     <p style="font-weight: bold; font-size: 120%">Sending comments on this
       document</p>
