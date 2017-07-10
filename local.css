@@ -11,6 +11,12 @@ h3 {
   margin-top: 3em;
 }
 
+.deprecation-box h3 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 120%;
+    color: black;
+	}
 h4  {
   font-size: 100%;
   font-weight: normal;
